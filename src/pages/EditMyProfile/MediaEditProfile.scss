@@ -1,0 +1,94 @@
+@media screen and (max-width: 1023px) {
+	.App {
+		.pageWrapper {
+			.EditMyProfile {
+				padding-top: 40px;
+				position: relative;
+				top: 2vh;
+				.pageItems {
+					width: 80vw;
+					padding-bottom: 120px;
+					position: relative;
+					height: 100%;
+					.topTittle {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						.tittle {
+							font-size: clamp(10px, 2.7vw, 16px);
+						}
+						.titleWrapper {
+							.listTitle {
+								font-size: clamp(10px, 2vw, 16px);
+							}
+						}
+					}
+					.previewBlock{
+						position: relative;
+						height: 100%;
+						.GamePad{
+							height: 100%;
+							position: relative;
+							padding: clamp(40px, 3vw, 110px) 0 0;
+							// .keen-slider{
+							// 	img{
+							// 		width: 80%;
+							// 		height: 80%;
+							// 		object-fit: contain;
+							// 	}
+							// }
+							// &BlockItem{
+							// 	img{
+							// 		height: 80%;
+							// 		width: 80%;
+							// 	}
+							// }
+							&PanelBackground{
+								padding-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.App{
+		.pageWrapper{
+			.EditMyProfile{
+				padding-top: 25px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.App {
+		.pageWrapper {
+			.EditMyProfile {
+				padding-top: 10px;
+				.pageItems {
+					width: 95vw;
+					.topTittle {
+						padding: 0 2vw;
+					}
+					.mediaBlock {
+						width: 100% !important;
+						display: flex !important;
+						flex-direction: row;
+						flex-wrap: wrap;
+						justify-content: center;
+						margin: 0 auto;
+						max-width: clamp(250px, 80vw, 800px);
+						padding-bottom: 20px;
+						.mediaItem {
+							width: 48%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

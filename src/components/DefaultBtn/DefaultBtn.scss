@@ -1,0 +1,113 @@
+.defaultBtn {
+	background: none repeat scroll 0 0 transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: medium none;
+	border-spacing: 0;
+	font-weight: normal;
+	line-height: 1.42rem;
+	list-style: none outside none;
+	transition: all ease 0.3s;
+	border-radius: 30px;
+	margin: 0;
+	padding: 16px 0;
+	text-decoration: none;
+	text-indent: 0;
+	width: 100%;
+
+
+	&.redBtnBg {
+		background: linear-gradient(135.00deg, rgb(132, 9, 56) -0.15%, rgb(242, 34, 113) 99.85%),
+		  linear-gradient(135.00deg, rgb(24, 25, 32) 0%, rgb(15, 15, 19) 100%);
+		  @media screen and (min-width: 1024px) {
+			&:hover {
+				background: linear-gradient(135.00deg, rgb(112, 0, 46) -0.15%, rgb(222, 24, 103) 99.85%);
+			  }
+		  }
+
+	  }
+
+	  &.blueBtnBg {
+		background: linear-gradient(
+		  135.00deg,
+		  rgb(55, 63, 255) 0.009%,
+		  rgb(34, 202, 255) 100.009%
+		),
+		linear-gradient(135.00deg, rgb(132, 9, 56) -0.15%, rgb(242, 34, 113) 99.85%),
+		linear-gradient(135.00deg, rgb(24, 25, 32) 0%, rgb(15, 15, 19) 100%);
+		@media screen and (min-width: 1024px) {
+			&:hover {
+				background: linear-gradient(
+				  135.00deg,
+				  rgb(35, 43, 235) 0.009%,
+				  rgb(14, 182, 235) 100.009%
+				),
+				linear-gradient(135.00deg, rgb(112, 0, 46) -0.15%, rgb(222, 24, 103) 99.85%),
+				linear-gradient(135.00deg, rgb(4, 5, 12) 0%, rgb(0, 0, 6) 100%);
+			  }
+		}
+
+	  }
+
+	  &.roseAquaGradientBtnBg {
+		background: linear-gradient(
+		  135.85deg,
+		  rgb(255, 55, 223) 0.08%,
+		  rgb(34, 255, 242) 100.222%
+		),
+		linear-gradient(180.00deg, rgb(255, 55, 223), rgb(34, 255, 242) 100%),
+		linear-gradient(180.00deg, rgb(55, 63, 255), rgb(34, 202, 255) 100%),
+		linear-gradient(135.00deg, rgb(132, 9, 56) -0.144%, rgb(242, 34, 113) 99.856%),
+		linear-gradient(135.00deg, rgb(24, 25, 32), rgb(15, 15, 19) 100%);
+		@media screen and (min-width: 1024px) {
+			&:hover {
+				background: linear-gradient(
+				  135.85deg,
+				  rgb(235, 35, 203) 0.08%,
+				  rgb(14, 235, 222) 100.222%
+				),
+				linear-gradient(180.00deg, rgb(235, 35, 203), rgb(14, 235, 222) 100%),
+				linear-gradient(180.00deg, rgb(35, 43, 235), rgb(14, 182, 235) 100%),
+				linear-gradient(135.00deg, rgb(112, 0, 46) -0.144%, rgb(222, 24, 103) 99.856%),
+				linear-gradient(135.00deg, rgb(4, 5, 12), rgb(0, 0, 6) 100%);
+			  }
+		}
+
+	  }
+
+	  &.greyBtnBg {
+		opacity: 0.5;
+		mix-blend-mode: luminosity;
+		pointer-events: none;
+		background: linear-gradient(92deg, #840938 -0.15%, #F22271 99.85%), linear-gradient(158deg, #181920 0%, #0F0F13 100%);
+		box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.34), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.24), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.20), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.17), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.14), 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.10);
+	}
+
+	  &.transparentBtnBg {
+		background: transparent;
+		border: 1px solid white;
+		@media screen and (min-width: 1024px) {
+			&:hover {
+				background: black;
+			}
+		}
+
+	  }
+
+	span {
+		color: var(--white);
+		font-family: var(--font-family-urbanist);
+		font-size: clamp(16px, 4vw, 20px);
+		
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0%;
+		text-align: center;
+		padding: 0 10px;
+	}
+	svg{
+		transform: translateY(2px);
+	}
+}

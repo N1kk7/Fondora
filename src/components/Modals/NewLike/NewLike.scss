@@ -1,0 +1,96 @@
+.NewLikeModal {
+	.modalWrapper {
+		background: linear-gradient(168deg, #242016 0%, rgba(26, 23, 23, 0) 100%);
+		backdrop-filter: blur(17px);
+		.likesPreview {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			.item {
+				border: 2px solid #ffd226;
+				border-radius: 50%;
+				overflow: hidden;
+				position: relative;
+				
+				.imageWrapper{
+					width: 100%;
+					height: 100%;
+					align-items: center;
+					display: flex;
+					background: white;
+					justify-content: center;
+					position: relative;
+					img {
+						width: 80px;
+						height: 80px;
+						border-radius: 50%;
+						filter: blur(7px);
+						backdrop-filter: opacity(1);
+					}
+				}
+			
+			}
+			.first {
+				position: relative;
+				left: 1.5vw;
+				z-index: -1;
+			}
+			.second {
+				.imageWrapper{
+					img {
+						width: 120px;
+						height: 120px;
+					}
+					
+				}
+				
+			
+			}
+			.third {
+				position: relative;
+				right: 1.5vw;
+				z-index: 10;
+			}
+			.heartLabe{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				border-radius: 50px;
+				background: linear-gradient(146deg, #AC7D02 0%, #FFBB0C 100%);
+				transform: translateY(10px);
+				bottom: 0;
+				padding: 7px;
+			
+			}
+		}
+		.description {
+			width: 50%;
+			span {
+				color: #a2a2a2;
+				text-align: center;
+				font-family: var(--font-family-urbanist);
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 150%; /* 21px */
+				letter-spacing: 0.28px;
+			}
+		}
+		.modalButtons {
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			width: -webkit-fill-available;
+			gap: 20px;
+			.btn {
+				width: -webkit-fill-available;
+			}
+		}
+	}
+}
+
+@import url('./MediaNewLike.scss');

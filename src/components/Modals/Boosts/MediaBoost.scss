@@ -1,0 +1,29 @@
+@media screen and (max-width: 1023px) {
+	.BoostModal {
+		.boostWrapper {
+			.modalCloseBtn{
+				display: block !important;
+				position: absolute;
+				top: 20px;
+				right: 20px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.BoostModal {
+		.boostWrapper {
+			width: clamp(250px, 80vw, 650px) !important;
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.BoostModal {
+		.boostWrapper {
+			.boostInfo{
+				justify-content: flex-start !important;
+				gap: 15px !important;
+			}
+		}
+	}
+}

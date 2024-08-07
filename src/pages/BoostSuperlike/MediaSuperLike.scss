@@ -1,0 +1,65 @@
+
+@media screen and (max-width: 1023px) {
+		.superLikeWrapper {
+			padding: 50px 0 40px 0 !important;
+			padding-top: clamp(50px, 10vw, 75px) !important;
+			.breakLine{
+				span{
+					background-color: rgb(34 27 29) !important;
+				}
+			}
+		}
+}
+@media screen and (max-width: 700px) {
+	.superLikeWrapper {
+		width: clamp(300px, 90vw, 550px) !important;
+		// padding: 35px 0 40px 0 !important;
+		.superLikeBanner {
+			.bannerTitle {
+				max-width: 35vw;
+				text-align: start;
+			}
+		}
+		.cardWrapper {
+			.itemWrapper {
+				display: flex;
+				flex-wrap: nowrap;
+				width: 100%;
+				overflow: scroll;
+				.item {
+					min-width: 70vw;
+				}
+			}
+			.arrow{
+				display: none;
+			}
+		}
+		.goldPlanBanner {
+			margin-bottom: 90px;
+			.description {
+				p {
+					font-size: clamp(8px, 2.3vw, 14px) !important;
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.SuperLikes{
+		.superLikeWrapper {
+			.goldPlanBanner{
+				flex-wrap: wrap;
+				.description{
+					p{
+						display: none;
+					}
+				}
+				.mobileDescription{
+					display: block !important;
+					flex: 1 1 100%;
+				}
+			}
+		}
+	}
+}

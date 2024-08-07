@@ -1,0 +1,308 @@
+.Chat {
+	background: rgb(18, 18, 18);
+	overflow: hidden;
+	position: relative;
+	padding-left: clamp(317px, 30vw, 320px);
+	width: calc(100% - clamp(317px, 30vw, 320px));
+
+	.chatWrapper {
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		.chatArea {
+			flex-grow: 1;
+			flex-shrink: 1;
+			position: relative;
+			width: calc(100% - 400px);
+			height: 100%;
+			.chatBg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				img{
+					width: inherit;
+					height: inherit;
+					object-fit: cover;
+				}
+			}
+			.chatItems {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				.topBlock {
+					height: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					position: relative;
+					margin: 43px 20px 0;
+					gap: 20px;
+					width: -webkit-fill-available;
+					z-index: 10;
+					.companionAvatar {
+						position: relative;
+						width: 40px;
+						height: 40px;
+						img {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+						}
+						.onLinePin {
+							width: 8px;
+							height: 8px;
+							border-radius: 50%;
+							position: absolute;
+							right: 0px;
+							top: 0px;
+							border: 2px solid rgb(28 16 20);
+							background-color: rgb(34, 255, 122);
+						}
+					}
+					.companionDescription {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						border-radius: 20px;
+						padding: 12px 15px;
+						gap: 10px;
+						width: -webkit-fill-available;
+						background: rgb(21, 21, 21);
+						.avatars {
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
+							img {
+								width: 20px;
+								height: 20px;
+								border-radius: 50%;
+							}
+							.rightAvatar {
+								position: relative;
+								right: 5px;
+							}
+						}
+						.info,
+						.date {
+							display: flex;
+							align-items: center;
+							span {
+								color: var(--main-text-color);
+								font-family: var(--font-family-urbanist);
+								font-size: 12px;
+								font-weight: 500;
+								line-height: 150%;
+								letter-spacing: 0%;
+								text-align: center;
+							}
+						}
+						.date {
+							svg {
+								margin-right: 10px;
+							}
+						}
+					}
+					.buttonsBlock {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+				.chat {
+					// height: calc(100% - 150px);
+					width: 100%;
+					// position: absolute;
+					top: 0;
+
+					height: -webkit-fill-available;
+					position: relative;
+					margin-bottom: 10px;
+
+					.wrapper {
+						margin: 0 1vw;
+						position: absolute;
+						bottom: 0;
+						height: -webkit-fill-available;
+						display: flex;
+						overflow-y: auto;
+						min-height: 0;
+						flex-direction: column-reverse;
+						width: -webkit-fill-available;
+						padding-bottom: 15px;
+						.messages {
+							padding-top: 120px;
+							// padding-bottom: 30px;
+							justify-content: flex-end;
+							position: relative;
+							display: flex;
+							gap: 25px;
+							flex-direction: column;
+							width: 100%;
+							.message {
+								// width: 30vw;
+								.messageWrapper{
+									position: relative;
+									display: flex;
+									gap: 5px;
+									width: auto;
+									padding: 15px 20px;
+									// max-width: 80%;
+									flex-wrap: wrap;
+									min-width: 50px;
+									max-width: 30vw;
+
+									.smileBlock {
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										position: absolute;
+										background: rgb(163 117 117 / 60%);
+										border-radius: 15px;
+										padding: 10px;
+										top: 0;
+										.messageSmiles {
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+											gap: 10px;
+											span {
+												cursor: pointer;
+												color: #fff;
+												font-family: 'Reenie Beanie';
+												font-size: 20px;
+												font-style: normal;
+												font-weight: 500;
+												line-height: normal;
+												word-break: break-word;
+											}
+										}
+									}
+									.reaction {
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										border-radius: 20px;
+										background: #778797;
+										position: absolute;
+										bottom: 0;
+										span {
+											padding: 2px 10px;
+											font-size: 20px;
+										}
+									}
+								}
+								.timeSend {
+									// position: absolute;
+									// bottom: 0;
+									// right: 0;
+									// transform: translate(-10px, 17px);
+									margin-top: 5px;
+									span {
+										color: #a2a2a2;
+										font-family: var(--font-family-urbanist);
+										font-size: 12px;
+										font-style: normal;
+										font-weight: 500;
+									}
+								}
+
+
+							}
+
+							.owner {
+								text-align: end;
+								align-self: flex-end;
+								word-break: break-word;
+
+								.messageWrapper{
+									border-radius: 20px 0px 20px 20px;
+									background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), linear-gradient(92deg, #373fff 0.03%, #22caff 100.03%),
+										linear-gradient(90deg, #f02270 0.1%, #8a0b3b 102.02%);
+									box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+								}
+								.smileBlock {
+									transform: translateY(-110%);
+									// left: -1vw;
+									right: 70%;
+								}
+								.reaction {
+									right: 0;
+    								transform: translate(-10%, 55%);
+								}
+								.timeSend{
+									text-align: left;
+    								padding-left: 5px;
+								}
+								.readOwnerMsg {
+									transform: translateY(-10px);
+								}
+							}
+							.notOwner {
+								text-align: start;
+								align-self: flex-start;
+								word-break: break-word;
+
+								.messageWrapper{
+									border-radius: 0px 20px 20px 20px;
+									background: linear-gradient(90deg, #272626 0.1%, #1e1e26 102.02%);
+									box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+								}
+								.smileBlock {
+									left: 70%;
+									// transform: translate(100%, -100%);
+									transform: translateY(-110%);
+
+								}
+								.reaction {
+									right: 0;
+									transform: translate(-10%, 50%);
+								}
+							}
+						}
+					}
+				}
+				.inputBlock {
+					position: relative;
+					// position: absolute;
+				}
+			}
+		}
+		.ProfileComponent {
+			max-width: 400px;
+			min-width: initial;
+			width: 100%;
+			height: 100%;
+			flex-shrink: 0;
+			flex-grow: 0;
+			max-height: initial;
+			border-radius: 0;
+			margin: 0;
+
+			.ProfileComponentBlock {
+				height: 100%;
+				border-radius: 0;
+			}
+
+			.ProfileComponentWrapper {
+				height: 100%;
+				border-radius: 0;
+			}
+
+			.ProfileComponentInfo {
+				position: relative;
+				border-radius: 0;
+				padding: 32px 20px;
+			}
+
+			.ProfileButtons {
+				display: none;
+			}
+		}
+	}
+}
+
+@import url('./MediaChat.scss');

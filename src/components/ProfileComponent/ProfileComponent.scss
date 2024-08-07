@@ -1,0 +1,403 @@
+.ProfileComponent {
+	--side-padding: 0;
+	--top-padding: 0;
+	--top-margin: 50px;
+	--right-margin: 29vw;
+	--left-margin: 39vw;
+	--bottom-padding: 93px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: calc(100% - var(--left-margin) - var(--right-margin));
+	height: calc(100vh - var(--top-margin) - var(--top-margin));
+	position: relative;
+	margin: var(--top-margin) var(--right-margin) 0 var(--left-margin);
+
+	&Block {
+		height: 910px;
+		width: 600px;
+		max-width: 100%;
+		max-height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&Wrapper {
+		width: 100%;
+		overflow: auto;
+		height: 100%;
+		border-radius: 30px;
+	}
+
+	&Title {
+		color: #fff;
+		text-align: left;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		letter-spacing: 0.32px;
+		margin: 10px 0 20px;
+	}
+
+	&Info {
+		background-color: #121212;
+		padding: 32px 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: relative;
+		margin-top: -300px;
+		border-radius: 30px;
+		z-index: 1;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.tag {
+			font-size: 13px;
+			color: #a2a2a2;
+			display: flex;
+			padding: 5px 15px;
+			align-items: center;
+			gap: 5px;
+			border-radius: 30px;
+			background: #212020;
+			white-space: nowrap;
+		}
+	}
+
+	&ProfileToggler {
+		position: absolute;
+		top: -15px;
+		right: 50px;
+		z-index: 1;
+		display: flex;
+		width: 30px;
+		height: 30px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: #eb0565;
+
+		@media screen and (min-width: 1024px) {
+			&:hover {
+				background: #ff5e86;
+			}
+		}
+	}
+
+	&MainInfo {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		.name {
+			color: #fff;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 100%;
+		}
+
+		.age {
+			color: #fff;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+		}
+	}
+
+	&AdditionalInfo {
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		span {
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+		}
+	}
+
+	&DescriptionInfo {
+		p {
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%;
+			text-align: left;
+		}
+	}
+
+	&Searching {
+		&Block {
+			display: flex;
+			padding: 10px 20px;
+			align-items: center;
+			gap: 15px;
+			align-self: stretch;
+			border-radius: 30px;
+			background: #212020;
+		}
+
+		&Icon {
+			font-size: 34px;
+			line-height: 31px;
+		}
+
+		&Text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&Title {
+			color: #a2a2a2;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+		}
+
+		&SubTitle {
+			color: #a2a2a2;
+			text-align: center;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: 0.28px;
+		}
+	}
+
+	&MessageBlock {
+		display: flex;
+		padding: 20px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		align-self: stretch;
+		border-radius: 20px;
+		border: 1px solid #ffbe18;
+		background: linear-gradient(146deg, #131417 0%, #131417 100%);
+
+		textarea {
+			width: -webkit-fill-available;
+			border-radius: 30px;
+			background: #212020;
+			// padding: 10px 20px;
+			padding: 10px 45px 10px 20px;
+			font-family: var(--font-family-urbanist);
+			resize: none;
+			color: white;
+		}
+		textarea::placeholder {
+			color: #a2a2a2;
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 400;
+			height: -webkit-fill-available;
+		}
+		textarea:focus {
+			outline: none;
+		}
+	}
+
+	&MessageBlockTop {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 15px;
+	}
+	&TextAreaBlock {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+
+		
+		
+	}
+	&SendBtn{
+		position: absolute;
+		right: 0;
+		transform: translateX(-30%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg{
+			border: 1px solid var(--main-text-color);
+			border-radius: 50%;
+			padding: 3px;
+			path{
+				fill: var(--main-text-color);
+			}
+		}
+	}
+
+	&ActiveSendBtn {
+		svg{
+			border: 1px solid #ffbe18;
+			
+			path{
+				fill: #ffbe18;
+			}
+		}
+	}
+
+	&MessageIcon {
+		position: relative;
+		width: 30%;
+		max-width: 50px;
+		.imageContainer {
+			position: relative;
+			display: inline-block;
+			border-radius: 50%;
+			overflow: hidden;
+			padding: 1px;
+			.imageBorder {
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				right: -3px;
+				bottom: -3px;
+				background: linear-gradient(180deg, #e8206c 0%, #2e97fe 100%);
+				border-radius: calc(50% + 3px);
+				z-index: 0;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+				position: relative;
+				z-index: 1;
+			}
+		}
+		svg {
+			position: absolute;
+			bottom: 0;
+			right: 50%;
+			z-index: 1;
+			transform: translate(50%, 30%);
+			border-radius: 20px;
+			padding: 5px;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+
+	&MessageText {
+		text-align: start;
+	}
+
+	&MessageTitle {
+		display: block;
+		color: #ffbe18;
+		font-family: var(--font-family-urbanist);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 150%; /* 21px */
+		letter-spacing: 0.28px;
+	}
+
+	&MessageSubTitle {
+		display: block;
+		color: #a2a2a2;
+		font-family: var(--font-family-urbanist);
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 150%; /* 19.5px */
+	}
+
+	&Buttons {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 20px;
+
+		&Block {
+			display: flex;
+			padding: 10px 20px;
+			align-items: center;
+			gap: 15px;
+			align-self: stretch;
+			border-radius: 20px;
+			border: 1px solid #54484d;
+			background: linear-gradient(146deg, #131417 0%, #131417 100%);
+			cursor: pointer;
+		}
+
+		&Icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&Text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&Title {
+			color: #fff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+			text-align: start;
+		}
+
+		&SubTitle {
+			color: #a2a2a2;
+			text-align: start;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 150%;
+		}
+	}
+
+	&LabelsList {
+		li {
+			&.hidden {
+				display: none;
+			}
+			.tag {
+				height: 20px;
+			}
+		}
+	}
+}
+
+.profileOpened .ProfileComponent {
+	min-width: 600px;
+	&Info {
+		padding-bottom: var(--bottom-padding);
+	}
+}

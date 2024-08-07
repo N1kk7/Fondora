@@ -1,0 +1,22 @@
+@media screen and (max-width: 1023px) {
+	.Chat {
+		width: 100vw;
+		height: 100vh;
+		z-index: 10;
+		.chatWrapper {
+			.userBlock {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.Chat {
+		.chatWrapper {
+			.ProfileComponent {
+				display: none;
+			}
+		}
+	}
+}

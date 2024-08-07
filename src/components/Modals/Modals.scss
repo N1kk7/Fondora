@@ -1,0 +1,30 @@
+.Modal {
+	// width: 100vw;
+	width: calc(100vw - clamp(200px, 32vw, 320px));
+	padding-left: clamp(200px, 32vw, 320px);
+	height: 100vh;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	.modalWrapper {
+		width: clamp(300px, 50vw, 600px);
+		border-radius: 20px;
+		background: linear-gradient(146deg, #131417 0%, #131417 100%);
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px 20px;
+		.modalCloseBtn {
+			display: none;
+		}
+	}
+}
+
+@import url('./MediaModals.scss');
